@@ -1,3 +1,3 @@
 # Android-NotHesaplama-SQLite
 
-Basitçe öğrenci notu hesaplayarak sonucunu SQLite veritabanına kaydeden, veri silme ve düzenleme fonksiyonları bulunduran bir Android uygulaması.
+An Android application that simply calculates the student grade and saves the result to the SQLite database, with data deletion and editing functions.
