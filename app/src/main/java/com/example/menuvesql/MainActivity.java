@@ -38,13 +38,24 @@ public class MainActivity extends AppCompatActivity {
         buttonKaydet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String ad = etAd.getText().toString();
-                int vizeNot = Integer.parseInt(etVize.getText().toString());
-                int finalNot = Integer.parseInt(etFinal.getText().toString());
-                double basariNotu = (vizeNot * 0.4) + (finalNot * 0.6);
+                if (etAd.getText().toString().isEmpty()) {
+                    etAd.setError("Bu alan boş bırakılamaz!");
+                }
+                else if (etVize.getText().toString().isEmpty()) {
+                    etVize.setError("Bu alan boş bırakılamaz!");
+                }
+                else if (etFinal.getText().toString().isEmpty()) {
+                    etFinal.setError("Bu alan boş bırakılamaz!");
+                }
+                else {
+                    String ad = etAd.getText().toString();
+                    int vizeNot = Integer.parseInt(etVize.getText().toString());
+                    int finalNot = Integer.parseInt(etFinal.getText().toString());
+                    double basariNotu = (vizeNot * 0.4) + (finalNot * 0.6);
 
-                veriTabani.veriEkle(ad, vizeNot, finalNot, basariNotu);
-                Toast.makeText(MainActivity.this, "Not Kaydedildi", Toast.LENGTH_SHORT).show();
+                    veriTabani.veriEkle(ad, vizeNot, finalNot, basariNotu);
+                    Toast.makeText(MainActivity.this, "Not Kaydedildi", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

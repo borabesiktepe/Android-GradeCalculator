@@ -51,14 +51,19 @@ public class DuzenleSayfasi extends AppCompatActivity {
         buttonDuzenle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int vizeNot = Integer.parseInt(etVize2.getText().toString());
-                int finalNot = Integer.parseInt(etFinal2.getText().toString());
-                double basariNot = (vizeNot * 0.4) + (finalNot * 0.6);
+                if (etVize2.getText().toString().isEmpty() || etFinal2.getText().toString().isEmpty()) {
+                    Toast.makeText(DuzenleSayfasi.this, "Öğrenci Seçiniz", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    int vizeNot = Integer.parseInt(etVize2.getText().toString());
+                    int finalNot = Integer.parseInt(etFinal2.getText().toString());
+                    double basariNot = (vizeNot * 0.4) + (finalNot * 0.6);
 
-                veriTabani.veriGuncelle(kisiId, textViewAd.getText().toString(), vizeNot, finalNot, basariNot);
-                Toast.makeText(DuzenleSayfasi.this, "Not güncellendi", Toast.LENGTH_SHORT).show();
-                Listele();
-                Temizle();
+                    veriTabani.veriGuncelle(kisiId, textViewAd.getText().toString(), vizeNot, finalNot, basariNot);
+                    Toast.makeText(DuzenleSayfasi.this, "Not güncellendi", Toast.LENGTH_SHORT).show();
+                    Listele();
+                    Temizle();
+                }
             }
         });
 
