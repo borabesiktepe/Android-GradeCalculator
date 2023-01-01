@@ -35,14 +35,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Sil" />
+            android:text="Öğrenciyi Sil" />
 
         <Button
             android:id="@+id/buttonDuzenle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Düzenle" />
+            android:text="Notu Düzenle" />
     </LinearLayout>
 
     <TextView
@@ -62,7 +62,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Yeni Vize"
+        android:hint="Yeni Vize Notu"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAd" />
@@ -74,7 +74,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Yeni Final"
+        android:hint="Yeni Final Notu"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etVize2" />
