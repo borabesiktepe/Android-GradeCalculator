@@ -70,10 +70,15 @@ public class DuzenleSayfasi extends AppCompatActivity {
         buttonSil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                veriTabani.veriSil(kisiId);
-                Toast.makeText(DuzenleSayfasi.this, "Öğrenci silindi", Toast.LENGTH_SHORT).show();
-                Listele();
-                Temizle();
+                if (etVize2.getText().toString().isEmpty() || etFinal2.getText().toString().isEmpty()) {
+                    Toast.makeText(DuzenleSayfasi.this, "Silinecek Öğrenciyi Seçiniz", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    veriTabani.veriSil(kisiId);
+                    Toast.makeText(DuzenleSayfasi.this, "Öğrenci silindi", Toast.LENGTH_SHORT).show();
+                    Listele();
+                    Temizle();
+                }
             }
         });
     }
