@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">MenuVeSql</string>
+    <string name="app_name">Not Hesapla</string>
+    <string name="student_name">Öğrenci adı</string>
+    <string name="midterm_grade">Vize notu</string>
+    <string name="final_grade">Final notu</string>
+    <string name="save_grade">Notu Kaydet</string>
+    <string name="enter_grade">Not Giriş</string>
+    <string name="edit_grade">Not Düzenle</string>
+    <string name="delete_student">Öğrenciyi Sil</string>
+    <string name="new_midterm_grade">Yeni vize notu</string>
+    <string name="new_final_grade">Yeni final notu</string>
+    <string name="table_info">ID - Ad - Vize - Final - Başarı Notu</string>
+    <string name="required_message">Bu alan boş bırakılamaz!</string>
+    <string name="grade_saved">Not Kaydedildi</string>
+    <string name="choose_student">Öğrenci Seçiniz</string>
+    <string name="grade_updated">Not güncellendi</string>
+    <string name="student_deleted">Öğrenci silindi</string>
 </resources>

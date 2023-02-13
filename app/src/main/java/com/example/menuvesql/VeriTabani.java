@@ -14,10 +14,12 @@ import java.util.List;
 public class VeriTabani extends SQLiteOpenHelper {
 
     //Veritabanı Tanımları
+    //Database Definations
     private static final String DATABASE_NAME = "notlar.db";
     private static final int DATABASE_VERSION = 1;
 
     //Tablo Tanımları
+    //Table Definations
     private static final String TABLE_NAME = "t_notlar";
     private static final String ROW_ID = "ID";
     private static final String ROW_ADLAR = "Adlar";

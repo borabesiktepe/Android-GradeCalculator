@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculate Grade</string>
+    <string name="student_name">Student name</string>
+    <string name="midterm_grade">Midterm grade</string>
+    <string name="final_grade">Final grade</string>
+    <string name="save_grade">Save the Grade</string>
+    <string name="enter_grade">Enter Grades</string>
+    <string name="edit_grade">Edit Grades</string>
+    <string name="delete_student">Delete Student</string>
+    <string name="new_midterm_grade">New midterm grade</string>
+    <string name="new_final_grade">New final grade</string>
+    <string name="table_info">ID - Name - Midterm - Final - Success Grade</string>
+    <string name="required_message">This field cannot be left blank!</string>
+    <string name="grade_saved">Grade saved</string>
+    <string name="choose_student">Choose the student</string>
+    <string name="grade_updated">Grade updated</string>
+    <string name="student_deleted">Student deleted</string>
+</resources>

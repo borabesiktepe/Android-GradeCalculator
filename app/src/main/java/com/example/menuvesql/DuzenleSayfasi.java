@@ -35,6 +35,7 @@ public class DuzenleSayfasi extends AppCompatActivity {
     }
 
     //Veritabanı Değişkenleri
+    //Database Variables
     VeriTabani veriTabani;
     int kisiId = 0;
 
@@ -43,7 +44,7 @@ public class DuzenleSayfasi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_duzenle_sayfasi);
         init();
-        setTitle("Not Düzenle");
+        setTitle(getString(R.string.edit_grade));
         veriTabani = new VeriTabani(this);
 
         Listele();
@@ -52,7 +53,7 @@ public class DuzenleSayfasi extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (etVize2.getText().toString().isEmpty() || etFinal2.getText().toString().isEmpty()) {
-                    Toast.makeText(DuzenleSayfasi.this, "Öğrenci Seçiniz", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DuzenleSayfasi.this, getString(R.string.choose_student), Toast.LENGTH_SHORT).show();
                 }
                 else {
                     int vizeNot = Integer.parseInt(etVize2.getText().toString());
@@ -60,7 +61,7 @@ public class DuzenleSayfasi extends AppCompatActivity {
                     double basariNot = (vizeNot * 0.4) + (finalNot * 0.6);
 
                     veriTabani.veriGuncelle(kisiId, textViewAd.getText().toString(), vizeNot, finalNot, basariNot);
-                    Toast.makeText(DuzenleSayfasi.this, "Not güncellendi", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DuzenleSayfasi.this, getString(R.string.grade_updated), Toast.LENGTH_SHORT).show();
                     Listele();
                     Temizle();
                 }
@@ -71,11 +72,11 @@ public class DuzenleSayfasi extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (etVize2.getText().toString().isEmpty() || etFinal2.getText().toString().isEmpty()) {
-                    Toast.makeText(DuzenleSayfasi.this, "Silinecek Öğrenciyi Seçiniz", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DuzenleSayfasi.this, getString(R.string.choose_student), Toast.LENGTH_SHORT).show();
                 }
                 else {
                     veriTabani.veriSil(kisiId);
-                    Toast.makeText(DuzenleSayfasi.this, "Öğrenci silindi", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DuzenleSayfasi.this, getString(R.string.student_deleted), Toast.LENGTH_SHORT).show();
                     Listele();
                     Temizle();
                 }
@@ -105,7 +106,7 @@ public class DuzenleSayfasi extends AppCompatActivity {
 
     private void Temizle() {
         kisiId = 0;
-        textViewAd.setText("Öğrenci Adı");
+        textViewAd.setText(getString(R.string.student_name));
         etVize2.setText("");
         etFinal2.setText("");
     }

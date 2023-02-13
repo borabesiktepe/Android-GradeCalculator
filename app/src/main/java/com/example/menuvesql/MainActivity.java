@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        setTitle("Not Giriş");
+        setTitle(getString(R.string.enter_grade));
 
         veriTabani = new VeriTabani(this);
 
@@ -39,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (etAd.getText().toString().isEmpty()) {
-                    etAd.setError("Bu alan boş bırakılamaz!");
+                    etAd.setError(getString(R.string.required_message));
                 }
                 else if (etVize.getText().toString().isEmpty()) {
-                    etVize.setError("Bu alan boş bırakılamaz!");
+                    etVize.setError(getString(R.string.required_message));
                 }
                 else if (etFinal.getText().toString().isEmpty()) {
-                    etFinal.setError("Bu alan boş bırakılamaz!");
+                    etFinal.setError(getString(R.string.required_message));
                 }
                 else {
                     String ad = etAd.getText().toString();
@@ -54,13 +54,14 @@ public class MainActivity extends AppCompatActivity {
                     double basariNotu = (vizeNot * 0.4) + (finalNot * 0.6);
 
                     veriTabani.veriEkle(ad, vizeNot, finalNot, basariNotu);
-                    Toast.makeText(MainActivity.this, "Not Kaydedildi", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.grade_saved), Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
     //OptionsMenu İşlemleri
+    //OptionsMenu Transactions
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.options_menu, menu);
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Not Düzenleme Sayfasına Geçiş
+    //Navigating to Edit Grades Page
     private void navToDuzenle() {
         Intent intent = new Intent(MainActivity.this, DuzenleSayfasi.class);
         startActivity(intent);

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:text="ID - Ad - Vize - Final - Başarı Notu"
+        android:text="@string/table_info"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,8 +37,9 @@
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewNotlar">
+        app:layout_constraintTop_toBottomOf="@+id/etFinal2">
 
         <Button
             android:id="@+id/buttonSil"
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="4dp"
             android:layout_weight="1"
-            android:text="Öğrenciyi Sil" />
+            android:text="@string/delete_student" />
 
         <Button
             android:id="@+id/buttonDuzenle"
@@ -54,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:layout_weight="1"
-            android:text="Notu Düzenle" />
+            android:text="@string/edit_grade" />
     </LinearLayout>
 
     <TextView
@@ -62,10 +63,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="46dp"
-        android:text="Öğrenci Adı"
+        android:layout_marginTop="40dp"
+        android:text="@string/student_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewNotlar" />
 
     <EditText
         android:id="@+id/etVize2"
@@ -74,7 +75,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Yeni Vize Notu"
+        android:hint="@string/new_midterm_grade"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAd" />
@@ -86,7 +87,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Yeni Final Notu"
+        android:hint="@string/new_final_grade"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etVize2" />

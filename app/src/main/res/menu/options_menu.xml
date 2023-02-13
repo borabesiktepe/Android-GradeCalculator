@@ -4,10 +4,10 @@
 
     <item
         android:id="@+id/girisSayfa"
-        android:title="Not Giriş"
+        android:title="@string/enter_grade"
         app:showAsAction="always" />
     <item
         android:id="@+id/duzenleSayfa"
-        android:title="Not Düzenle"
+        android:title="@string/edit_grade"
         app:showAsAction="always" />
 </menu>
